@@ -6,7 +6,7 @@ Domain InformacionPropiedades {
 		domainVisionStatement = ""
 	}
 
-	Subdomain AnalisMercadoPropiedades {
+	Subdomain AnalisisMercadoPropiedades {
     type = CORE_DOMAIN
     domainVisionStatement = ""
 	}

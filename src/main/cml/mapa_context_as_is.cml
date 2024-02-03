@@ -1,0 +1,47 @@
+ContextMap DDDSampleMap {
+	
+
+    contains CaracterizacionPropiedadesContext
+	contains AnalisisMercadoPropiedadesContext
+	contains ComparacionVentasContext
+	contains TransacionesPropiedadesContext
+	contains InvestigacionInquilinosContext
+	contains DisponibilidadPropiedadesContext
+
+	 
+	AnalisisMercadoPropiedadesContext [D, ACL]<-[U] TransacionesPropiedadesContext
+
+	ComparacionVentasContext [D, ACL]<-[U] TransacionesPropiedadesContext
+
+	TransacionesPropiedadesContext [D, ACL]<-[U] DisponibilidadPropiedadesContext
+
+	CaracterizacionPropiedadesContext [D, ACL]<-[U] DisponibilidadPropiedadesContext
+}
+
+
+/* The original booking application context */
+BoundedContext CaracterizacionPropiedadesContext {
+	
+}
+
+
+BoundedContext AnalisisMercadoPropiedadesContext {
+	
+}
+
+
+BoundedContext ComparacionVentasContext {
+	
+}
+
+BoundedContext TransacionesPropiedadesContext {
+	
+}
+
+BoundedContext InvestigacionInquilinosContext {
+	
+}
+
+BoundedContext DisponibilidadPropiedadesContext {
+	
+}
