@@ -1,34 +1,34 @@
-Domain InformacionPropiedades {
-  domainVisionStatement = ""
+Domain ServiciosInformacionPropiedades {
+  domainVisionStatement = "liderar globalmente ofreciendo servicios distintivos de información sobre bienes raíces comerciales, adaptándose a cada mercado y siendo el referente esencial en la toma de decisiones estratégicas inmobiliarias."
 
 	Subdomain CaracterizacionPropiedades {
 		type = CORE_DOMAIN
-		domainVisionStatement = ""
+		domainVisionStatement = "Diferenciador clave que proporciona información detallada sobre propiedades comerciales."
 	}
 
-	Subdomain AnalisisMercadoPropiedades {
+	Subdomain AnalisisMercadoPropiedadesCampo {
     type = CORE_DOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Realiza inspecciones físicas y recopila datos esenciales, siendo fundamental para la calidad y diferenciación del servicio."
 	}
 
 	Subdomain ComparacionVentas {
     type = CORE_DOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Brinda análisis de ventas de propiedades y tendencias del mercado."
 	}
 
 	
 	Subdomain TransacionesPropiedades {
     type = GENERIC_SUBDOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Registra y monitoriza transacciones de arrendamientos y ventas en los mercados pertinentes."
 	}
 
 	Subdomain InvestigacionInquilinos {
     type = GENERIC_SUBDOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Recopila y verifica información de inquilinos, aportando a la operación comercial con datos relevantes."
 	}
 
 	Subdomain DisponibilidadPropiedades {
     type = SUPPORTING_DOMAIN
-    domainVisionStatement = ""
+    domainVisionStatement = "Ofrece información sobre la disponibilidad de propiedades en alquiler, venta, subarrendamiento, etc. Un servicio común en el mercado, aunque esencial."
 	}
 }
