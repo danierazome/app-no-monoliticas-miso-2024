@@ -23,7 +23,7 @@ Domain InformacionPropiedades {
 	}
 
 	Subdomain InvestigacionInquilinos {
-    type = SUPPORTING_DOMAIN
+    type = GENERIC_SUBDOMAIN
     domainVisionStatement = ""
 	}
 
