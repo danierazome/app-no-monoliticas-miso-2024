@@ -1,28 +1,37 @@
-![Context Mapper](https://raw.githubusercontent.com/wiki/ContextMapper/context-mapper-dsl/logo/cm-logo-github-small.png)
-# Context Mapper Demo for Online IDE 
-[![Build](https://github.com/ContextMapper/web-ide-demo/actions/workflows/build.yml/badge.svg)](https://github.com/ContextMapper/web-ide-demo/actions) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+**README - Proyecto Rassa-2024**
 
-Welcome to Context Mapper's demo repository. It illustrates how you can configure your own repository for the usage of Context Mapper in the online IDE [Gitpod](https://www.gitpod.io/).
+**Integrantes:**
+- Daniel Erazo
+- Santiago Sierra
 
-## Start Using Context Mapper Now
-Start the online IDE and use Context Mapper right now:
+**Grupo:**
+Rassa-2024
 
-<a href="https://gitpod.io/#https://github.com/ContextMapper/web-ide-demo" style="padding: 10px;">
-    <img src="https://gitpod.io/button/open-in-gitpod.svg" width="150" alt="Push" align="center">
-</a>
-<br/><br/>
+---
 
-## Open the Demo File
-In the folder `src/main/cml` you find a small **[CML demo](./src/main/cml/demo.cml)** (DDD sample application) where you can start to familiarize yourself with our DSL and our tools.
-You can find more info's about the tool and a complete documentation on our website [https://contextmapper.org/](https://contextmapper.org/).
+**Primera parte de la entrega - Carpeta `app-no-monoliticas-miso-2024/src/main/cml/dominios.cml`**
 
-## Create Your Own Context Mapping Repository
-You can simply fork this repository and click the button above to start the online IDE for your repo.
+En esta carpeta, encontrarás el archivo `dominios.cml` que representa la definición de dominios.
 
-## Useful Links
- 
- * [More example models](https://github.com/ContextMapper/context-mapper-examples)
- * [CML language reference](https://contextmapper.org/docs/language-reference/)
- * [Rapid prototyping tutorial](https://contextmapper.org/docs/rapid-ooad/)
- * [Architectural Refactorings](https://contextmapper.org/docs/architectural-refactorings/)
- * [Generators](https://contextmapper.org/docs/generators/)
+---
+
+**Segunda parte de la entrega - Carpeta `app-no-monoliticas-miso-2024/src/main/resources/es-bp-miro-images/`**
+
+Esta carpeta contiene dos imágenes generadas en Miro que ilustran visualmente nuestro proceso de EventStorming en su formato BigPicture. Las imágenes representan, respectivamente, el estado actual (AS-IS) y el estado futuro (TO-BE) de nuestro sistema. Estas visualizaciones proporcionan una perspectiva gráfica y facilitan la comprensión de las interacciones y relaciones entre los distintos contextos y componentes del sistema.
+
+- `AS_IS.jpg`: Imagen que muestra el estado actual del sistema.
+- `TO_BE.jpg`: Imagen que representa el estado futuro planificado del sistema.
+
+---
+
+**Tercera parte de la entrega - Carpeta `app-no-monoliticas-miso-2024/src/main/cml/`**
+
+En esta carpeta, encontrarás dos archivos CML cruciales para nuestra entrega:
+
+1. `mapa_context_as_is.cml`: Este archivo contiene la definición del mapa de contexto del estado actual (AS-IS) del sistema. Aquí se detallan las relaciones y conexiones entre los distintos bounded contexts.
+
+2. `mapa_context_to_be.cml`: Este archivo describe el mapa de contexto planeado para el futuro (TO-BE) del sistema. Muestra cómo los bounded contexts evolucionarán y se relacionarán en la nueva arquitectura.
+
+Recomendamos revisar estos archivos para obtener una comprensión detallada de cómo nuestro sistema se transformará para cumplir con los objetivos establecidos.
+
+¡Gracias por revisar nuestro proyecto Rassa-2024! Estamos emocionados de compartir esta visión y estamos abiertos a cualquier comentario o pregunta que puedan tener.
