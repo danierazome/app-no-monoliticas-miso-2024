@@ -1,0 +1,122 @@
+/* TO-BE */
+ContextMap PDAExpansionMap {
+	contains InformacionServiciosBienesRaicesComercialesContext
+	contains ServiciosInvestigaciónCampoContext
+	contains AnalisisComparativoVentasContext
+	contains InformaciónTransaccionesContext
+	contains InvestigaciónInquilinosContext
+	contains InformaciónDisponibilidadContext
+    contains InternacionalizacionContext
+
+	/* Core Domain Relationships */
+	ServiciosInvestigaciónCampoContext [SK]<->[SK] InformaciónTransaccionesContext
+
+	/* New Subdomain for Tenant Research */
+	InvestigaciónInquilinosContext [D, ACL]<-[U] AnalisisComparativoVentasContext
+
+	/* Renamed Subdomain for Clarity */
+	AnalisisComparativoVentasContext [D, ACL]<-[U] InformaciónTransaccionesContext
+
+
+	InformaciónTransaccionesContext [D, ACL]<-[U] InformaciónDisponibilidadContext
+	InformacionServiciosBienesRaicesComercialesContext [D, ACL]<-[U] InformaciónDisponibilidadContext
+    InformacionServiciosBienesRaicesComercialesContext [D, ACL]<-[U] InternacionalizacionContext
+	ServiciosInvestigaciónCampoContext [D, ACL]<-[U] InternacionalizacionContext
+}
+
+BoundedContext InformacionServiciosBienesRaicesComercialesContext {
+	Module property {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate CaracteristicasPropiedadComercial {
+			Entity Propiedad
+			ValueObject Ubicacion
+			ValueObject DetallesArriendo
+			ValueObject Transaccion
+			ValueObject Inquilino
+			ValueObject Disponibilidad
+			enum PropertyType {
+				HOGAR, OFICINA, INDUSTRIAL, MEDICA
+			}
+		}
+	}
+
+	Module ubicacion {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate Ubicacion {
+			Entity Ubicacion
+			ValueObject Coordenadas
+		}
+	}
+}
+
+BoundedContext ServiciosInvestigaciónCampoContext {
+	Module investigacionCampo {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate InvestigacionCampo {
+			DomainEvent EventoInvestigacion
+			ValueObject DetallesInvestigacion
+		}
+	}
+}
+
+BoundedContext AnalisisComparativoVentasContext {
+	Module comparacionVentas {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate ComparacionVentas {
+			Entity VentaXPropiedad
+			ValueObject DetallesVentas
+			ValueObject AnalisisComparativo
+		}
+	}
+}
+
+BoundedContext InformaciónTransaccionesContext {
+	Module transacciones {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate Transaccion {
+			Entity TransaccionComercial
+			ValueObject DetallesTransaccion
+		}
+	}
+}
+
+BoundedContext InvestigaciónInquilinosContext {
+	Module investigacionInquilinos {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate InvestigacionInquilinos {
+			Entity Inquilino
+			ValueObject DetallesInvestigacion
+		}
+	}
+}
+
+BoundedContext InformaciónDisponibilidadContext {
+	Module disponibilidad {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate Disponibilidad {
+			Entity DisponibilidadPropiedad
+			ValueObject DetallesDisponibilidad
+		}
+	}
+}
+
+BoundedContext InternacionalizacionContext {
+    Module internacionalizacion {
+        basePackage = com.pda.services.domain.model
+
+        Aggregate ConfiguracionInternacional {
+            Entity ConfiguracionInternacional
+            ValueObject Pais
+            ValueObject IndicativoTelefonico
+            ValueObject Moneda
+            ValueObject Idioma
+        }
+    }
+}
