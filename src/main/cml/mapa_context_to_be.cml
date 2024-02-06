@@ -1,27 +1,25 @@
 /* TO-BE */
 ContextMap PDAExpansionMap {
 	contains InformacionServiciosBienesRaicesComercialesContext
-	contains ServiciosInvestigaciónCampoContext
+	contains ServiciosInvestigacionCampoContext
 	contains AnalisisComparativoVentasContext
-	contains InformaciónTransaccionesContext
-	contains InvestigaciónInquilinosContext
-	contains InformaciónDisponibilidadContext
+	contains InformacionTransaccionesContext
+	contains InvestigacionInquilinosContext
+	contains InformacionDisponibilidadContext
     contains InternacionalizacionContext
 
-	/* Core Domain Relationships */
-	ServiciosInvestigaciónCampoContext [SK]<->[SK] InformaciónTransaccionesContext
 
-	/* New Subdomain for Tenant Research */
-	InvestigaciónInquilinosContext [D, ACL]<-[U] AnalisisComparativoVentasContext
+	ServiciosInvestigacionCampoContext [SK]<->[SK] InformacionTransaccionesContext
 
-	/* Renamed Subdomain for Clarity */
-	AnalisisComparativoVentasContext [D, ACL]<-[U] InformaciónTransaccionesContext
+	InvestigacionInquilinosContext [D, ACL]<-[U] AnalisisComparativoVentasContext
+
+	AnalisisComparativoVentasContext [D, ACL]<-[U] InformacionTransaccionesContext
 
 
-	InformaciónTransaccionesContext [D, ACL]<-[U] InformaciónDisponibilidadContext
-	InformacionServiciosBienesRaicesComercialesContext [D, ACL]<-[U] InformaciónDisponibilidadContext
+	InformacionTransaccionesContext [D, ACL]<-[U] InformacionDisponibilidadContext
+	InformacionServiciosBienesRaicesComercialesContext [D, ACL]<-[U] InformacionDisponibilidadContext
     InformacionServiciosBienesRaicesComercialesContext [D, ACL]<-[U] InternacionalizacionContext
-	ServiciosInvestigaciónCampoContext [D, ACL]<-[U] InternacionalizacionContext
+	ServiciosInvestigacionCampoContext [D, ACL]<-[U] InternacionalizacionContext
 }
 
 BoundedContext InformacionServiciosBienesRaicesComercialesContext {
@@ -51,7 +49,7 @@ BoundedContext InformacionServiciosBienesRaicesComercialesContext {
 	}
 }
 
-BoundedContext ServiciosInvestigaciónCampoContext {
+BoundedContext ServiciosInvestigacionCampoContext {
 	Module investigacionCampo {
 		basePackage = com.pda.services.domain.model
 
@@ -74,7 +72,7 @@ BoundedContext AnalisisComparativoVentasContext {
 	}
 }
 
-BoundedContext InformaciónTransaccionesContext {
+BoundedContext InformacionTransaccionesContext {
 	Module transacciones {
 		basePackage = com.pda.services.domain.model
 
@@ -85,7 +83,7 @@ BoundedContext InformaciónTransaccionesContext {
 	}
 }
 
-BoundedContext InvestigaciónInquilinosContext {
+BoundedContext InvestigacionInquilinosContext {
 	Module investigacionInquilinos {
 		basePackage = com.pda.services.domain.model
 
@@ -96,7 +94,7 @@ BoundedContext InvestigaciónInquilinosContext {
 	}
 }
 
-BoundedContext InformaciónDisponibilidadContext {
+BoundedContext InformacionDisponibilidadContext {
 	Module disponibilidad {
 		basePackage = com.pda.services.domain.model
 
