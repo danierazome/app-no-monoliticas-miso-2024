@@ -27,6 +27,7 @@ Esta carpeta contiene dos imágenes generadas en Miro que ilustran visualmente n
 - `AS_IS.jpg`: Imagen que muestra el estado actual del sistema.
 - `TO_BE.jpg`: Imagen que representa el estado futuro planificado del sistema.
 - `lenguaje_ubicuo.jpg`: Imagen que representa el estado futuro planificado del sistema.
+- `diccionario-datos-xlsx`: Template en Excel con el diccionario de datos.
 
 ---
 

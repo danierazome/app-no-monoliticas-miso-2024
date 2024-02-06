@@ -19,29 +19,92 @@ ContextMap DDDSampleMap {
 }
 
 
-/* The original booking application context */
 BoundedContext CaracterizacionPropiedadesContext {
-	
-}
+	module caracterizacionPropiedades {
+		basePackage = com.pda.services.domain.model
 
+		Aggregate CaracteristicasPropiedadComercial {
+			Entity Propiedad
+			ValueObject TamañoPropiedad
+			ValueObject TipoConstruccion
+			ValueObject Zonificacion
+			ValueObject TamañoLote
+			ValueObject NumeroPisos
+			ValueObject FotografiaPropiedad
+			ValueObject TipoPropiedad
+			enum PropertyType {
+				HOGAR, OFICINA, INDUSTRIAL, MEDICA
+			}
+		}
+	}
+}
 
 BoundedContext AnalisisMercadoPropiedadesContext {
-	
+	module analisisMercadoPropiedades {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate AnalisisMercadoPropiedades {
+			Entity Mercado
+			ValueObject FactoresInfluencia
+			ValueObject TendenciasMercado
+			ValueObject PorcentajeOcupacion
+			ValueObject Analisis_mercado
+		}
+	}
 }
 
-
 BoundedContext ComparacionVentasContext {
-	
+	module comparacionVentas {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate ComparacionVentas {
+			Entity VentaXPropiedad
+			ValueObject NombrePropiedad
+			ValueObject TipoPropiedad
+			ValueObject FechaVenta
+			ValueObject PrecioVenta
+			ValueObject AreaPropiedad
+			ValueObject ComparacionOtrasPropiedades
+		}
+	}
 }
 
 BoundedContext TransacionesPropiedadesContext {
-	
+	module transaccionesPropiedades {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate TransaccionPropiedad {
+			Entity TransaccionComercial
+			ValueObject MecanismoExtraccion
+			ValueObject TipoAgente
+			ValueObject FuenteInformacion
+		}
+	}
 }
 
 BoundedContext InvestigacionInquilinosContext {
-	
+	module investigacionInquilinos {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate InvestigacionInquilinos {
+			Entity Inquilino
+			ValueObject Propiedad
+			ValueObject Ubicacion
+			ValueObject Inquilino
+			ValueObject InquilinoAnterior
+			ValueObject PeriodoInvestigacion
+		}
+	}
 }
 
 BoundedContext DisponibilidadPropiedadesContext {
-	
+	module disponibilidadPropiedades {
+		basePackage = com.pda.services.domain.model
+
+		Aggregate DisponibilidadPropiedades {
+			Entity DisponibilidadPropiedad
+			ValueObject Ubicacion
+			ValueObject Disponibilidad
+		}
+	}
 }
